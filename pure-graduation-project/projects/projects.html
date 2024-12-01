@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Projects</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="../home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href="../Instructor.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Teaching Materials/Teaching Materials.html">
+              <i class="fa-solid fa-book" class="active"></i>
+              <span>Teaching Matrial</span>
+            </a>
+          </li>
+          <li>
+            <a href="../upload.html">
+              <i class="fa-solid fa-flask-vial"></i>
+              <span>Exams</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="active">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Grades.html">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Grades</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Schedules.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Academic advising/Academic Advising doctor.html">
+              <i class="fa-solid fa-user-tie"></i>
+              <span>Academic Advising Doctor</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!--^*===============>body section<====================  -->
+      <section class="projects text-black">
+        <h2 class="text-center pb-4 pt-4">Projects</h2>
+        <div class="container bg-light-gray shadow-md rounded-2">
+          <div class="d-flex justify-content-between px-5 pt-3">
+            <p>Doctor Name</p>
+            <p>Year</p>
+          </div>
+
+          <div class="row my-5 justify-content-between">
+            <div class="col-lg-6">
+              <div class="project-info mx-5 d-flex flex-column">
+                <label class="h4" for="project-idea">Team ID</label>
+                <input
+                  class="mb-3"
+                  type="text"
+                  placeholder="Insert Team ID"
+                  id="team-id"
+                  name="team-id"
+                  maxlength="8"
+                  value="53824"
+                />
+                <label class="h4" for="project-idea">Project Idea</label>
+                <input
+                  class="mb-3"
+                  type="text"
+                  placeholder="Insert Project Idea"
+                  id="project-idea"
+                  name="project-idea"
+                  maxlength="50"
+                  value="web Project"
+                />
+                <p class="h4" for="students-name">Students Name</p>
+                <div class="d-flex align-items-baseline gap-1">
+                  <span class="h5">student 1:</span>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="text"
+                    placeholder="Insert Student Name"
+                    id="student1-name"
+                    name="student1-name"
+                    maxlength="50"
+                    value="Mohamed Said "
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1">
+                  <span class="h5">student 2:</span>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="text"
+                    placeholder="Insert Student Name"
+                    id="student2-name"
+                    name="student2-name"
+                    maxlength="50"
+                    value="Khaled Mohamed"
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1">
+                  <span class="h5">student 3:</span>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="text"
+                    placeholder="Insert Student Name"
+                    id="student3-name"
+                    name="student3-name"
+                    maxlength="50"
+                    value="Momen Zayed"
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1">
+                  <span class="h5">student 4:</span>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="text"
+                    placeholder="Insert Student Name"
+                    id="student4-name"
+                    name="student4-name"
+                    maxlength="50"
+                    value="Mahmoud Mohamed"
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1">
+                  <span class="h5">student 5:</span>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="text"
+                    placeholder="Insert Student Name"
+                    id="student5-name"
+                    name="student5-name"
+                    maxlength="50"
+                    value="Sara Halawa"
+                  />
+                  </div>
+                  <div class="d-flex align-items-baseline gap-1">
+                    <span class="h5">student 6:</span>
+                    <input
+                      class="mb-3 flex-grow-1"
+                      type="text"
+                      placeholder="Insert Student Name"
+                      id="student6-name"
+                      name="student6-name"
+                      maxlength="50"
+                      value="Zeinab Elsayed"
+                    />
+                </div>
+                <div class="d-flex align-items-baseline gap-1">
+                  <span class="h5">student 7:</span>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="text"
+                    placeholder="Insert Student Name"
+                    id="student7-name"
+                    name="student7-name"
+                    maxlength="50"
+                    value="Amira Mamdouh"
+                  />
+              </div>
+              <div class="d-flex align-items-baseline gap-1">
+                <span class="h5">student 8:</span>
+                <input
+                  class="mb-3 flex-grow-1"
+                  type="text"
+                  placeholder="Insert Student Name"
+                  id="student8-name"
+                  name="student8-name"
+                  maxlength="50"
+                  value="Asmaa Adel"
+                />
+            </div>
+            <div class="d-flex align-items-baseline gap-1">
+              <span class="h5">student 9:</span>
+              <input
+                class="mb-3 flex-grow-1"
+                type="text"
+                placeholder="Insert Student Name"
+                id="student9-name"
+                name="student9-name"
+                maxlength="50"
+                value="student9"
+              />
+          </div>
+          <div class="d-flex align-items-baseline gap-1">
+            <span class="h5">student 10:</span>
+            <input
+              class="mb-3 flex-grow-1"
+              type="text"
+              placeholder="Insert Student Name"
+              id="student10-name"
+              name="student10-name"
+              maxlength="50"
+              value="student10"
+            />
+        </div>
+                <button
+                  id="save-btn"
+                  class="btn btn-lg w-25 btn-light-blue mt-2"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+
+            <div class="col-lg-4 text-center">
+              <div
+                class="member-info text-start mx-5 d-flex flex-column bg-gray pt-3"
+              >
+                <div class="term-link ps-3 fs-6 mb-2">
+                  <i class="fa-solid fa-play pe-2 fs-6"></i>
+                  Team id:
+                  <div class="mx-4">
+                    <span id="team-id-show">53824</span>
+                  </div>
+                </div>
+                <div class="term-link ps-3 fs-6 mb-2">
+                  <i class="fa-solid fa-play pe-2 fs-6"></i>
+                  Project idea:
+                  <div class="mx-4">
+                    <span id="project-idea-show">web Project</span>
+                  </div>
+                </div>
+                <div class="term-link ps-3 fs-6 mb-2">
+                  <i class="fa-solid fa-play pe-2 fs-6"></i>
+                  Students Name:
+                  <div class="mx-4">
+                    <span class="d-block" id="student1-name-show"
+                      >Mohamed Said</span
+                    >
+                    <span class="d-block" id="student2-name-show"
+                      >Khaled Mohamed</span
+                    >
+                    <span class="d-block" id="student3-name-show"
+                      >Momen Zayed</span
+                    >
+                    <span class="d-block" id="student4-name-show"
+                      >Mahmoud Mohamed</span
+                    >
+                    <span class="d-block" id="student5-name-show"
+                    >Sara Halawa</span
+                  >
+                  <span class="d-block" id="student6-name-show"
+                    >Zeinab Elsayed</span
+                  >
+                  <span class="d-block" id="student7-name-show"
+                    >Amira Mamdouh</span
+                  >
+                  <span class="d-block" id="student8-name-show"
+                    >Asmaa Adel</span
+                  >
+                  <span class="d-block" id="student9-name-show"
+                    >student9</span
+                  >
+                  <span class="d-block" id="student10-name-show"
+                    >student10</span
+                  >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    src="https://kit.fontawesome.com/e39d260dfe.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/table-to-excel/1.0.0/tableToExcel.min.js"></script>
+  <script src="./JS/index.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Handle printing
+      document
+        .getElementById("printButton")
+        .addEventListener("click", function () {
+          window.print();
+        });
+
+      // Handle downloading as Excel
+      document
+        .getElementById("downloadButton")
+        .addEventListener("click", function () {
+          const table = document.getElementById("scheduleTable");
+          const html = table.outerHTML;
+
+          const blob = new Blob([html], { type: "application/vnd.ms-excel" });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "Schedule.xls";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+    });
+  </script>
+  <script defer>
+    // trigger all inputs to show their values in the preview section
+    const inputs = [...document.querySelectorAll("input")];
+    inputs.forEach((input) => {
+      input.addEventListener("input", function () {
+        const id = input.id;
+        const value = input.value;
+        const show = document.getElementById(`${id}-show`);
+        show.innerText = value;
+      });
+    });
+
+    // save the values in the local storage
+    document.getElementById("save-btn").addEventListener("click", function () {
+      const inputs = [...document.querySelectorAll("input")];
+      const data = inputs.reduce((acc, input) => {
+        acc[input.id] = input.value;
+        return acc;
+      }, {});
+      window.localStorage.setItem("projects", JSON.stringify(data));
+      alert("Projects saved successfully");
+    });
+
+    // load the values from the local storage
+    const projects = window.localStorage.getItem("projects");
+    if (projects) {
+      const parsedProjects = JSON.parse(projects);
+      for (const key in parsedProjects) {
+        // set the value of the inputs
+        const input = document.getElementById(key);
+        input.value = parsedProjects[key];
+        // set the value of the preview section
+        const show = document.getElementById(`${key}-show`);
+        show.innerText = parsedProjects[key];
+      }
+    }
+  </script>
+</html>

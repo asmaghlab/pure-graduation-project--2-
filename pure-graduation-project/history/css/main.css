@@ -1,0 +1,65 @@
+/* *============> Global var<============ */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --navbar-bg-color: #006ac2;
+  --container-bg-color: #e9e8e3;
+  --block-bg-color: #d9d9d9;
+  --btn-bg-color: #b1cddf;
+}
+
+.shadow-md {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px !important;
+}
+
+.bg-light-gray {
+  background-color: var(--container-bg-color);
+}
+
+.bg-gray {
+  background-color: var(--block-bg-color);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.w-18 {
+  width: 18%;
+}
+
+/* *=============>Navbar<===========  */
+.navbar {
+  background-color: var(--navbar-bg-color);
+}
+
+/* *=============>History section<===========  */
+
+.project-title {
+  position: relative;
+}
+.project-title::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 70%;
+  height: 1px;
+  background-color: black;
+}
+
+.end-border {
+  position: relative;
+}
+.end-border::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  width: 1px;
+  height: 70%;
+  background-color: black;
+}

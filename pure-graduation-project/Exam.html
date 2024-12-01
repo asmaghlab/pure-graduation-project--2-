@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Exams</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href="Student.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="courses.html">
+              <i class="fa-solid fa-book"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Academic Advising.html"
+            >
+              <i class="fa-solid fa-address-card"></i>
+              <span>Academic Advising</span>
+            </a>
+          </li>
+          <li>
+            <a href="Schedules.html">
+              <i class="fa-solid fa-table"></i>
+              <span>Schedules</span>
+            </a>
+          </li>
+          <li>
+            <a href="history/history.html" >
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>History</span>
+            </a>
+          </li>
+          <li>
+            <a href="Absence.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Absence</span>
+            </a>
+          </li>
+          <li>
+            <a href="Exam.html" class="active">
+              <i class="fa-regular fa-file"></i>
+              <span>Exam</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <section class="pb-4">
+        <h2 class="text-center pb-4 pt-4">Exams</h2>
+        <div class="container bg-color shadow-md pb-5">
+          <div class="d-flex justify-content-between px-5 pt-2">
+            <p>Student Name</p>
+            <p>Year</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-10 px-3 pt-5 p-5 mx-auto">
+              <div class="materils text-center table-secondary p-3">
+                <div class="d-flex justify-content-around mb-3">
+                  <button
+                    type="button"
+                    data-level="1"
+                    class="level btn btn-lg rounded-pill table-bg"
+                  >
+                    Level 1
+                  </button>
+                  <button
+                    type="button"
+                    data-level="2"
+                    class="level btn btn-lg rounded-pill table-bg"
+                  >
+                    Level 2
+                  </button>
+                  <button
+                    type="button"
+                    data-level="3"
+                    class="level btn btn-lg rounded-pill table-bg"
+                  >
+                    Level 3
+                  </button>
+                  <button
+                    type="button"
+                    data-level="4"
+                    class="level btn btn-lg rounded-pill table-bg"
+                  >
+                    Level 4
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 pt-5 pb-5 px-5 d-flex justify-content-center">
+              <select
+                class="form-select table-bg"
+                style="width: 500px"
+                aria-label="Default select example"
+                aria-placeholder="Term"
+              >
+                <option selected disabled>Term</option>
+                <option value="first">One</option>
+                <option value="second">Two</option>
+                <option value="second">Samar</option>
+              </select>
+            </div>
+            <div class="col-lg-12 pt-5 pb-5 px-5 d-flex justify-content-center">
+              <button class="open-exam btn btn-lg w-25 btn-hblue">
+                Open Exam
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    src="https://kit.fontawesome.com/e39d260dfe.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/table-to-excel/1.0.0/tableToExcel.min.js"></script>
+  <script src="./JS/index.js"></script>
+  <script>
+    const levelButtons = [...document.querySelectorAll(".level")];
+    // make active class on the selected level
+    levelButtons.forEach((level) => {
+      level.addEventListener("click", () => {
+        levelButtons.forEach((l) => l.classList.remove("active"));
+        level.classList.add("active");
+      });
+    });
+
+    const openExamButton = document.querySelector(".open-exam");
+
+    openExamButton.addEventListener("click", () => {
+      // get level and term from the selected buttons
+      const level = levelButtons.find((l) => l.classList.contains("active"));
+      const term = document.querySelector("select").value;
+      if (!level || !term) return alert("Please select level and term");
+      // redirect to the exam page
+      window.location.href = `./exam-preview.html?level=${level.dataset.level}&term=${term}`;
+    });
+  </script>
+</html>

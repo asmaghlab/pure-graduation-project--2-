@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Academic Advising</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href=".\Student.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href=".\courses.html">
+              <i class="fa-solid fa-book"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="active">
+              <i class="fa-solid fa-address-card"></i>
+              <span>Academic Advising</span>
+            </a>
+          </li>
+          <li>
+            <a href=".\Schedules.html">
+              <i class="fa-solid fa-table"></i>
+              <span>Schedules</span>
+            </a>
+          </li>
+          <li>
+            <a href="./history/history.html">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>History</span>
+            </a>
+          </li>
+          <li>
+            <a href="Absence.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Absence</span>
+            </a>
+          </li>
+          <li>
+            <a href="Exam.html">
+              <i class="fa-regular fa-file"></i>
+              <span>Exam</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <section class="pb-5">
+        <h2 class="text-center pb-4 pt-4">Academic Advising</h2>
+        <div class="container bg-color shadow-md">
+          <div class="d-flex justify-content-between px-5 pt-2">
+            <p>Student Name</p>
+            <p>Year</p>
+          </div>
+          <h5 class="text-center fs-5 pt-3">Recording Of Materials</h5>
+          <div class="row">
+            <div class="col-lg-6 pt-5 px-5">
+              <select
+                class="form-select table-bg"
+                aria-label="Default select example"
+                aria-placeholder="Year"
+              >
+                <option selected disabled>Year</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="3">four</option>
+              </select>
+              <select
+                class="form-select mt-2 table-bg"
+                aria-label="Default select example"
+                aria-placeholder="Year"
+              >
+                <option selected disabled>Term</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Samar</option>
+              </select>
+              <div class="materialsSub mt-4 ps-2">
+                <table
+                  class="table table-borderless table-secondary unassigned-materials"
+                >
+                  <tbody>
+                    <tr>
+                      <td>Material 1</td>
+                      <td class="text-center">
+                        <button class="btn btn-hblue px-3 add-course add" data-material-id="1">
+                          ADD
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Material 2</td>
+                      <td class="text-center">
+                        <button class="btn btn-hblue px-3 add-course add" data-material-id="2">
+                          ADD
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Material 3</td>
+                      <td class="text-center">
+                        <button class="btn btn-hblue px-3 add-course add" data-material-id="3">
+                          ADD
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Material 4</td>
+                      <td class="text-center">
+                        <button class="btn btn-hblue px-3 add-course add" data-material-id="4">
+                          ADD
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Material 5</td>
+                      <td class="text-center">
+                        <button class="btn btn-hblue px-3 add-course add" data-material-id="5">
+                          ADD
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Material 6</td>
+                      <td class="text-center">
+                        <button class="btn btn-hblue px-3 add-course add" data-material-id="6">
+                          ADD
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Material 7</td>
+                      <td class="text-center">
+                        <button class="btn btn-hblue px-3 add-course add" data-material-id="7">
+                          ADD
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col-lg-4 pt-5 p-5 mx-auto">
+              <div class="materials text-center table-secondary p-3">
+                <table
+                  class="table table-borderless table-secondary assigned-materials"
+                >
+                  <tbody>
+                    <!-- <tr>
+                                    <td>Material 1</td>
+                                </tr>
+                                <tr>
+                                    <td>Material 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Material 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Material 4</td>
+                                </tr>
+                                <tr>
+                                    <td>Material 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Material 6</td>
+                                </tr> -->
+                  </tbody>
+                </table>
+                
+              </div>
+            </div>
+            <div class="w-100 d-flex align-items-center justify-content-end pt-5 p-4">
+              <button id="save-academic-advising" class="save-btn">Save</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    src="https://kit.fontawesome.com/e39d260dfe.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/table-to-excel/1.0.0/tableToExcel.min.js"></script>
+  <script src="./JS/index.js"></script>
+</html>

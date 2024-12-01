@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Student</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href="" class="active">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="courses.html">
+              <i class="fa-solid fa-book"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a href="Academic Advising.html">
+              <i class="fa-solid fa-address-card"></i>
+              <span>Academic Advising</span>
+            </a>
+          </li>
+          <li>
+            <a href="Schedules.html">
+              <i class="fa-solid fa-table"></i>
+              <span>Schedules</span>
+            </a>
+          </li>
+          <li>
+            <a href="./history/history.html">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>History</span>
+            </a>
+          </li>
+          <li>
+            <a href="Absence.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Absence</span>
+            </a>
+          </li>
+          <li>
+            <a href="Exam.html">
+              <i class="fa-regular fa-file"></i>
+              <span>Exam</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="StudentProfile">
+        <div class="container">
+          <div class="box" data-aos="fade-down">
+            <div class="img-box">
+              <img id="profileImage" src="" alt="" />
+              <label for="UserImage" class="userInputAvatar"></label>
+              <input type="file" name="UserImage" id="UserImage" hidden />
+            </div>
+            <div class="right" id="rightSection">
+              <div class="edit-action" id="editAction">
+                <i id="editIcon" class="fa-solid fa-edit"></i>
+                <span id="editText">Edit</span>
+              </div>
+              <div class="input-box">
+                <label for="name"><i class="fa-solid fa-user"></i></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="name"
+                  readonly
+                />
+              </div>
+              <div class="input-box">
+                <label for="date"
+                  ><i class="fa-solid fa-calendar-days"></i
+                ></label>
+                <input
+                  type="date"
+                  name="date"
+                  id="date"
+                  placeholder="date"
+                  readonly
+                />
+              </div>
+              <div class="input-box">
+                <label for="dept"
+                  ><i class="fa-solid fa-graduation-cap"></i
+                ></label>
+                <input
+                  type="text"
+                  name="dept"
+                  id="dept"
+                  placeholder="dept"
+                  readonly
+                />
+              </div>
+              <div class="input-box">
+                <label for="phone"><i class="fa-solid fa-phone"></i></label>
+                <input
+                  type="phone"
+                  name="phone"
+                  id="phone"
+                  placeholder="phone number"
+                  readonly
+                />
+              </div>
+              <div class="input-box">
+                <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="email"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/index.js"></script>
+    <script src="./JS/StudentProfile.js"></script>
+  </body>
+</html>

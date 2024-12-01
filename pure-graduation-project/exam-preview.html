@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        embed {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    const loadExam = () => {
+      // get level and term from url
+      const urlParams = new URLSearchParams(window.location.search);
+      console.log(urlParams);
+      const level = urlParams.get("level");
+      const term = urlParams.get("term");
+
+      if (!level || !term) return;
+
+      // get Exam from local storage
+      const Exam = JSON.parse(localStorage.getItem("examsData"));
+      if (!Exam) return;
+
+      // get Exam for the selected level and term
+      console.log(level, term)
+      const selectedExam = Exam.find(
+        (s) => s.level === level && s.term === term
+      );
+      if (!selectedExam) return;
+    console.log(selectedExam);
+
+      // get the Exam link
+      const filePath = selectedExam.link;
+
+
+      console.log(filePath);
+      // display the Exam
+      const iframe = document.createElement("iframe");
+      iframe.src = filePath || 'https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true';
+      iframe.width = `${window.innerWidth}px`;
+      iframe.height = `${window.innerHeight}px`;
+      document.body.appendChild(iframe);
+    };
+    loadExam()
+  </script>
+</html>

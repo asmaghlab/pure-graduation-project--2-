@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Parent Login</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="form.css" />
+
+  </head>
+  <body>
+    <div id="root">
+      <!---------------------------------------header------------------------------------------>
+      <div class="header">
+        <div class="container">
+          <a href="home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href="Home.html">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="./dept.html">
+              <i class="fas fa-database"></i>
+              <span>Departments</span>
+            </a>
+          </li>
+          <li>
+            <a href="student_form.html" >
+              <i class="fas fa-right-to-bracket"></i>
+              <span> Student Login</span>
+            </a>
+          </li>
+          <li>
+            <a href="staff_form.html" >
+              <i class="fas fa-right-to-bracket"></i>
+              <span>Staff Login</span>
+            </a>
+          </li>
+          <li>
+            <a href="doctor form.html" >
+              <i class="fas fa-right-to-bracket"></i>
+              <span>Doctor Login</span>
+            </a>
+          </li>
+          <li>
+            <a href=""class="active" >
+              <i class="fas fa-right-to-bracket"></i>
+              <span> Parent Login</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    <div class="Form">
+        <div class="container">
+          <div class="box">
+            <h1>Parent Login</h1>
+            <div class="input-box">
+              <input
+                type="email"
+                name="Nation_ID"
+                id="Nation_ID"
+                placeholder="Stud.Email"required
+              />
+            </div>
+            <div class="input-box">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password" required
+              />
+            </div>
+            <p class="warning">Forget Password</p>
+            <a class="input-button" href="./parent-history/history.html">
+              <button>LogIn</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script
+        src="https://kit.fontawesome.com/e39d260dfe.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./JS/index.js"></script>
+  
+
+</body>
+</html>

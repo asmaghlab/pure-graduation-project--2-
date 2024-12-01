@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        embed {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    const loadSchedule = () => {
+      console.log("schedule preview");
+      // get level and term from url
+      const urlParams = new URLSearchParams(window.location.search);
+      console.log(urlParams);
+      const level = urlParams.get("level");
+      const term = urlParams.get("term");
+
+      if (!level || !term) return;
+
+      // get schedule from local storage
+      const schedule = JSON.parse(localStorage.getItem("schedules"));
+      if (!schedule) return;
+
+      // get schedule for the selected level and term
+      console.log(level, term)
+      const selectedSchedule = schedule.find(
+        (s) => s.level === level && s.term === term
+      );
+      if (!selectedSchedule) return;
+    console.log(selectedSchedule);
+
+      // get the schedule link
+      const filePath = selectedSchedule.link;
+
+      // display the schedule
+      const embed = document.createElement("embed");
+      embed.src = filePath || 'https://utfs.io/f/fde4ea26-cf12-45d9-a77b-7da763df9b1f-ihqgq7.com_api_documentation_v37.pdf';
+      embed.type = "application/pdf";
+      embed.width = "100%";
+      embed.height = `${window.innerHeight}px`;
+      document.body.appendChild(embed);
+    };
+    loadSchedule()
+  </script>
+</html>

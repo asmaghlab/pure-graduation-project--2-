@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Grades</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="student.css">
+
+
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+   
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="../home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href=""class="active">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Teaching Materials/Teaching Materials.html">
+              <i class="fa-solid fa-book"></i>
+              <span>Teaching Matrial</span>
+            </a>
+          </li>
+          <li>
+            <a href="../upload.html">
+              <i class="fa-solid fa-flask-vial"></i>
+              <span>Exams</span>
+            </a>
+          </li>
+          <li>
+            <a href="../projects/projects.html">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Grades.html" >
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Grades</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Schedule.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Schedule</span>
+            </a>
+          </li>
+        </li>
+        <li>
+          <a href="../Academic advising/Academic Advising doctor.html">
+            <i class="fa-solid fa-user-tie"></i>
+            <span>Academic Advising Doctor</span>
+          </a>
+        </li>
+        <li>
+          <a href="../Doctors IDs.pdf">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span>Doctors IDs</span>
+          </a>
+        </li>
+        </ul>
+      </div>
+   <!--^*===============>body section<====================  -->
+   <section class="profile text-black">
+    <div class="container bg-white shadow-md rounded-2 py-5">
+      <div class="row my-2">
+        <div class="col-lg-4">
+          <div class="subjects ms-5 p-3 bg-light-blue">
+            <div class="materials pb-25 mb-4">
+              <a href="../Teaching Materials/Teaching Materials.html" class="fs-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"class=" bi bi-layers  me-5" viewBox="0 0 16 16">
+                  <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0zM8 9.433 1.562 6 8 2.567 14.438 6z"/>
+                </svg>
+                Teaching Materials
+              </a>
+            </div>
+            <div class="materials pb-25 mb-4">
+              <a href="..\upload.html"  class="fs-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-layout-text-sidebar me-5" viewBox="0 0 16 16">
+                  <path d="M3.5 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM3 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+                  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm12-1v14h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm-1 0H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h9z"/>
+                </svg>
+                Exams
+              </a>
+            </div>
+            <div class="materials pb-25 mb-4">
+              <a href="../projects/projects.html" class="fs-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-journal-code me-5" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708"/>
+                  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                </svg>
+                Projects
+              </a>
+            </div>
+            <div class="materials pb-25 mb-4">
+              <a href="..\grades.html" class="fs-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-file-earmark-ruled me-5" viewBox="0 0 16 16">
+                  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5zM3 12v-2h2v2zm0 1h2v2H4a1 1 0 0 1-1-1zm3 2v-2h7v1a1 1 0 0 1-1 1zm7-3H6v-2h7z"/>
+                </svg>
+                Grades
+              </a>
+            </div>  
+            <div class="materials pb-25 mb-4">
+              <a href="..\Schedule.html" class="fs-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-calendar2-event me-45" viewBox="0 0 16 16">
+                  <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                  <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                Schedule
+              </a>
+            </div>
+            <div class="materials pb-25 mb-4">
+              <a href="../Academic advising/Academic Advising doctor.html" class="fs-5">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white me-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
+            </svg>
+            Academic advising Doctor
+              </a>
+           </div>
+            <div class="materials pb-25 mb-4">
+              <a href="../Doctors IDs.pdf" class="fs-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-journal-code me-5" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708"/>
+                  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                </svg>
+                Doctors IDs
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 ">
+          <div class="dr-profile mx-5">
+            <div class="profile-head text-center">
+              <img src="images/dr_nancy.jpeg" alt="" class="w-35">
+              <h3 class="fs-2 mt-3">Dr Nancy Abbas Elhefnawy</h3>
+            </div>
+            <div class="profile-body mt-5 text-center">
+                <input class="w-75 py-3"  type="text" placeholder="ID" />
+            </div>
+            <div class="profile-footer mt-4 text-center">
+              <button id="login-btn" class="btn btn-lg w-25 btn-light-blue">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    src="https://kit.fontawesome.com/e39d260dfe.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/table-to-excel/1.0.0/tableToExcel.min.js"></script>
+  <script src="./JS/index.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Handle printing
+      document
+        .getElementById("printButton")
+        .addEventListener("click", function () {
+          window.print();
+        });
+
+      // Handle downloading as Excel
+      document
+        .getElementById("downloadButton")
+        .addEventListener("click", function () {
+          const table = document.getElementById("scheduleTable");
+          const html = table.outerHTML;
+
+          const blob = new Blob([html], { type: "application/vnd.ms-excel" });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "Schedule.xls";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+    });
+  </script>
+  <script>
+    const loginBtn = document.getElementById("login-btn");
+    loginBtn.addEventListener("click", () => {
+      window.location.href = "../instructor.html";
+    });
+  </script>
+</body>
+</html>

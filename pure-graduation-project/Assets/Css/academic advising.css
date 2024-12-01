@@ -1,0 +1,287 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+General
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #006ac2;
+  --main-color-hover: #1787e0;
+  --main-text-color: #040d12;
+  --main-transition: all 0.3s ease-in-out;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 20px;
+  --main-border-radius: 0.5em;
+  --main-background-color: #fafafa;
+  --main-p-color: #777;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--main-background-color);
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--main-text-color);
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*Mobile Screen*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*Tab Screen*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*PC Screen*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-p-color);
+  border-radius: 2px;
+  transition: var(--main-transition);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color-hover);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Header
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.header {
+  position: relative;
+  padding: 10px;
+  background-color: var(--main-color);
+  height: 80px;
+}
+.header .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.header .container .logo {
+  height: 60px;
+}
+.header .container .left {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .container h3 {
+  position: relative;
+  font-size: 16px;
+  color: #eee;
+}
+
+.header .container .right {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+.header .container .right .name {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #eee;
+}
+@media (max-width: 460px) {
+  .header .container h3,
+  .header .container .right .name {
+    display: none;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Login Form 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Form {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+.Form .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.Form .container .box {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.Form .container .box h1 {
+  position: relative;
+  text-align: center;
+  color: var(--main-color);
+  padding-bottom: 10px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.Form .container .box h1::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  background-color: var(--main-color);
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Form .container .box .input-box {
+  position: relative;
+  background-color: #eee;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: var(--main-border-radius);
+}
+.Form .container .box .input-box input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  caret-color: var(--main-color);
+  border: 0;
+  background-color: transparent;
+  transition: var(--main-transition);
+  font-size: 16px;
+}
+.Form .container .box .input-box input:focus {
+  outline: 0;
+}
+.Form .container .box .input-box input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.Form .container .box .warning {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-p-color);
+}
+.Form .container .box .input-button {
+  position: relative;
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+}
+.Form .container .box .input-button:hover {
+  background-color: var(--main-color-hover);
+}
+.Form .container .box .input-button button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #eee;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: var(--main-border-radius);
+}
+
+main {
+  margin: 0 auto;
+  width: 800px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-info label {
+  margin-bottom: 10px;
+}
+
+.materials {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+table th {
+  text-align: left;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc;
+}

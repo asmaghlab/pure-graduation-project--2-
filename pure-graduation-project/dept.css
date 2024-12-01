@@ -1,0 +1,45 @@
+.single {
+    padding-top: 55px;
+}
+.single-title {
+    
+    padding: 15px;
+    color: #fff;
+    margin-bottom: 20px;
+    margin: 0 auto 30px auto;
+    font-size: 18px;
+}
+.contain {
+    color: black;
+    width: 750px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.contain:before, .contain:after {
+    display: table;
+    content: " ";
+}
+.container:after {
+    clear: both;
+}
+.contain:before, .contain:after {
+    display: table;
+    content: " ";
+}
+.roww {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.roww:before, .roww:after {
+    display: table;
+    content: " ";
+}
+.single .text-right {
+    text-align: left !important;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}

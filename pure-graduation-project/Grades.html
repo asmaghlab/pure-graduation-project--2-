@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Grades</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./Css/grades.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="/" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href="Instructor.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Teaching Materials/Teaching Materials.html">
+              <i class="fa-solid fa-book"></i>
+              <span>Teaching Matrial</span>
+            </a>
+          </li>
+          <li>
+            <a href="upload.html">
+              <i class="fa-solid fa-flask-vial"></i>
+              <span>Exams</span>
+            </a>
+          </li>
+          <li>
+            <a href="./projects/projects.html">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="Grades.html" class="active">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Grades</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Schedule.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Academic advising/Academic Advising doctor.html">
+              <i class="fa-solid fa-user-tie"></i>
+              <span>Academic Advising Doctor</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="Schedule">
+        <div class="container">
+          <div class="card">
+            <h1>Grades</h1>
+            <div class="button-control">
+              <button id="printButton">
+                <i class="fa-solid fa-print"></i>
+                Print
+              </button>
+              <button id="downloadButton">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                Download
+              </button>
+            </div>
+            <div class="ScheduleContainer">
+              <table class="printTable" id="scheduleTable">
+                <thead>
+                  <tr
+                    data-aos="fade-right"
+                    data-aos-easing="ease-in-out"
+                    data-aos-duration="1000"
+                  >
+                    <th colspan="2">Student Name</th>
+                    <th>Lecture</th>
+                    <th>Section</th>
+                    <th>Mid</th>
+                    <th>Final</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <form id="grades">
+                    <tr
+                      data-aos="fade-right"
+                      data-aos-easing="ease-in-out"
+                      data-aos-duration="1000"
+                    >
+                      <td colspan="2">Lorem ipsum dolor sit amet</td>
+                      <td data-label="Lec">
+                        <input
+                          type="number"
+                          id="lec"
+                          name="lec"
+                          value="5"
+                          style="width: 100%"
+                          min="0"
+                          max="10"
+                        />
+                      </td>
+                      <td data-label="Section">
+                        <input
+                          type="number"
+                          id="section"
+                          name="section"
+                          value="10"
+                          style="width: 100%"
+                          min="0"
+                          max="10"
+                        />
+                      </td>
+                      <td data-label="Midterm">
+                        <input
+                          type="number"
+                          id="midterm"
+                          name="midterm"
+                          value="10"
+                          style="width: 100%"
+                          min="0"
+                          max="20"
+                        />
+                      </td>
+                      <td data-label="Final">
+                        <input
+                          type="number"
+                          id="final"
+                          name="final"
+                          value="10"
+                          style="width: 100%"
+                          min="0"
+                          max="60"
+                        />
+                      </td>
+                      <td data-label="Total">40</td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <button type="reset" id="save-grades">save</button>
+                      </td>
+                    </tr>
+                  </form>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/table-to-excel/1.0.0/tableToExcel.min.js"></script>
+    <script src="./JS/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Handle printing
+        document
+          .getElementById("printButton")
+          .addEventListener("click", function () {
+            window.print();
+          });
+
+        // Handle downloading as Excel
+        document
+          .getElementById("downloadButton")
+          .addEventListener("click", function () {
+            const table = document.getElementById("scheduleTable");
+            const html = table.outerHTML;
+
+            const blob = new Blob([html], { type: "application/vnd.ms-excel" });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Schedule.xls";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          });
+      });
+
+      const form = document.getElementById("grades");
+      const saveGradesButton = document.getElementById("save-grades");
+
+      // validate number inputs
+      const numberInputs = document.querySelectorAll("input[type='number']");
+      numberInputs.forEach((input) => {
+        input.addEventListener("input", function () {
+          if (isNaN(this.value) || this.value === "") {
+            this.value = "";
+          } else {
+            if (this.value < parseInt(this.min)) {
+              this.value = this.min;
+            } else if (this.value > parseInt(this.max)) {
+              this.value = this.max;
+            }
+          }
+        });
+      });
+
+      const getFormValues = (form) => {
+        const data = new FormData(form);
+        const lec = data.get("lec");
+        const section = data.get("section");
+        const midterm = data.get("midterm");
+        const final = data.get("final");
+        return {
+          lec: parseInt(lec),
+          section: parseInt(section),
+          midterm: parseInt(midterm),
+          final: parseInt(final),
+          total: (parseInt(lec) || 0) + (parseInt(section) || 0) + (parseInt(midterm) || 0) + (parseInt(final) || 0),
+        };
+      };
+
+
+      document.querySelectorAll("input").forEach((input) => {
+        input.addEventListener("input", function () {
+          const grades = getFormValues(form);
+          document.querySelector("td[data-label='Total']").textContent = grades.total;
+        });
+      });
+      saveGradesButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const grades = getFormValues(form);
+        window.localStorage.setItem("grades", JSON.stringify(grades));
+        alert("Grades saved successfully");
+      });
+
+      // Load grades from local storage
+      const grades = JSON.parse(window.localStorage.getItem("grades"));
+      if (grades) {
+        document.getElementById("lec").value = grades.lec;
+        document.getElementById("section").value = grades.section;
+        document.getElementById("midterm").value = grades.midterm;
+        document.getElementById("final").value = grades.final;
+        document.querySelector("td[data-label='Total']").textContent = grades.total;
+      }
+    </script>
+  </body>
+</html>

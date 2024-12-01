@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>Academic Advising doctor</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+   
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="./home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href="../Instructor.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Teaching Materials/Teaching Materials.html">
+              <i class="fa-solid fa-book" class="active"></i>
+              <span>Teaching Matrial</span>
+            </a>
+          </li>
+          <li>
+            <a href="../upload.html">
+              <i class="fa-solid fa-flask-vial"></i>
+              <span>Exams</span>
+            </a>
+          </li>
+          <li>
+            <a href="../projects/projects.html">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Grades.html">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Grades</span>
+            </a>
+          </li>
+          <li>
+            <a href="../Schedule.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href=""class="active">
+              <i class="fa-solid fa-user-tie"></i>
+              <span>Academic Advising Doctor</span>
+            </a>
+          </li>
+         
+        </ul>
+      </div>
+
+    <!--^*===============>body section<====================  -->
+    <section class="academic-advising text-black">
+      <h2 class="text-center pb-4 pt-4">Academic Advising</h2>
+      <div class="container bg-light-gray shadow-md rounded-2">
+        <div class="d-flex justify-content-between px-5 pt-3">
+          <p>Droctor Name</p>
+          <p>Material</p>
+        </div>
+        <div class="row">
+          <div
+            class="col-md-12 d-flex align-items-center justify-content-center"
+          >
+            <p class="fw-semibold fs-3">Student ID</p>
+            <p class="ms-3">
+              <input type="text" />
+            </p>
+          </div>
+        </div>
+        <div class="row bg-gray g-4 mt-4 py-4 materials-container">
+          
+
+        </div>
+        
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/table-to-excel/1.0.0/tableToExcel.min.js"></script>
+    <script src="./JS/index.js"></script>
+   
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Handle printing
+        document
+          .getElementById("printButton")
+          .addEventListener("click", function () {
+            window.print();
+          });
+
+        // Handle downloading as Excel
+        document
+          .getElementById("downloadButton")
+          .addEventListener("click", function () {
+            const table = document.getElementById("scheduleTable");
+            const html = table.outerHTML;
+
+            const blob = new Blob([html], { type: "application/vnd.ms-excel" });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Schedule.xls";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          });
+      });
+    </script>
+    <script>
+      const materialsContainer = document.querySelector(".materials-container");
+      
+      const generateMaterialElement = (material) => {
+        const materialElement = document.createElement("div");
+        materialElement.classList.add("col-lg-4", "col-md-6", "col-sm-12", "d-flex", "justify-content-center", "align-items-baseline", "gap-2");
+        materialElement.innerHTML = `<p class="fs-4">Material ${material}</p>
+          <button type="button" class="btn-close btn-close-white bg-info" aria-label="Close"></button>
+        `;
+        return materialElement;
+      };
+
+      const loadMaterials = () => {
+        const materials = JSON.parse(localStorage.getItem("assignedMaterials")) || [];
+        if (materials.length === 0) {
+          materialsContainer.innerHTML = `<p class="text-center fs-3">No materials assigned yet</p>`;
+          return;
+        }
+        materials.forEach((material) => {
+          const materialElement = generateMaterialElement(material);
+          materialsContainer.appendChild(materialElement);
+        });
+      };
+      loadMaterials();
+
+      materialsContainer.addEventListener("click", (e) => {
+        if (e.target.classList.contains("btn-close")) {
+          // update the local storage
+          const materials = JSON.parse(localStorage.getItem("assignedMaterials")) || [];
+          const material = e.target.previousElementSibling.textContent.split(" ")[1];
+          const updatedMaterials = materials.filter((m) => m !== material);
+          localStorage.setItem("assignedMaterials", JSON.stringify(updatedMaterials));
+          // refresh the location
+          location.reload();
+        }
+
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Securety Project</title>
+    <!--- Style -->
+    <link rel="stylesheet" href="./assets/Css/normalize.css" />
+    <link rel="stylesheet" href="academic advising.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./assets/Css/all.min.css" />
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+  </head>
+  <body>
+    <!---------------------Start Header--------------------------->
+    <div class="header">
+      <div class="container">
+        <div class="left">
+          <img
+            src="./assets/Images/tanta-univ.png"
+            alt="Tanta University"
+            class="logo"
+          />
+          <h3>Tanta University</h3>
+        </div>
+        <div class="right">
+          <img
+            src="./assets/Images/logo.png"
+            alt="Computer Science Tanta University"
+            class="logo"
+          />
+          <div class="name">
+            <span>Faculty of Computer </span>
+            <span>and information</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------------End Header  ----------------->
+      <main>
+          <h1>Academic Advising</h1>
+          <section class="student-info">
+              <label for="student-name">Student Name:</label>
+              <input type="text" id="student-name" required>
+              <label for="year">Year:</label>
+              <select id="year">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  </select>
+          </section>
+          <section class="materials">
+              <h2>Recording of Materials</h2>
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Year</th>
+                          <th>Term</th>
+                          <th colspan="2">Material 1</th>
+                          <th colspan="2">Material 2</th>
+                          </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td><button>ADD</button></td>
+                          <td><button>DEL</button></td>
+                          <td><button>ADD</button></td>
+                          <td><button>DEL</button></td>
+                          </tr>
+                      </tbody>
+              </table>
+              <button id="submit">SUB</button>
+          </section>
+      </main>
+  </body>
+  </html>

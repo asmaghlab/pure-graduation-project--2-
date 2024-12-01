@@ -1,0 +1,1150 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+General
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #006ac2;
+  --main-color-hover: #1787e0;
+  --main-text-color: #040d12;
+  --white-color: #fafafa;
+  --main-transition: all 0.3s ease-in-out;
+  --main-padding-top: 50px;
+  --main-padding-bottom: 50px;
+  --main-border-radius: 0.5em;
+  --main-background-color: #fafafa;
+  --main-p-color: #777;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--main-background-color);
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--main-text-color);
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*Mobile Screen*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*Tab Screen*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*PC Screen*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-p-color);
+  border-radius: 2px;
+  transition: var(--main-transition);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color-hover);
+}
+.page {
+  width: 100%;
+  min-height: 100vh;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# back-to-top
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.back-to-top {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  z-index: 999;
+  color: #fff;
+  bottom: 15px;
+  right: 15px;
+  border-radius: var(--main-border-radius);
+  cursor: pointer;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Header
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-color);
+  height: 80px;
+  z-index: 999;
+}
+.header .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.header .container .logo {
+  height: 60px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Header left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.header .container .left {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.header .container h3 {
+  position: relative;
+  font-size: 16px;
+  color: #eee;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Header right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.header .container .right {
+  position: relative;
+  height: 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.header .container .right .name {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #eee;
+}
+@media (max-width: 460px) {
+  .header .container h3,
+  .header .container .right .name {
+    display: none;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Header navlinks 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.header .container .right i {
+  position: relative;
+  color: var(--main-background-color);
+  cursor: pointer;
+}
+.header .NavLinks {
+  position: fixed;
+  top: 80px;
+  height: calc(100vh - 80px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  background-color: var(--main-color);
+  min-width: 250px;
+  right: 0;
+  box-shadow: -8px 8px 10px 0px rgba(125, 149, 206, 0.3);
+  transition: var(--main-transition);
+  color: var(--main-background-color);
+}
+.header .NavLinks.active {
+  right: -270px;
+}
+.header .NavLinks li a {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: var(--main-background-color);
+  border-radius: 0.2em;
+  transition: var(--main-transition);
+}
+.header .NavLinks li a span {
+  position: relative;
+  font-weight: 600;
+}
+.header .NavLinks li a:hover,
+.header .NavLinks li a.active {
+  background-color: var(--main-background-color);
+  color: var(--main-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Landing 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 300px);
+  background-color: var(--main-background-color);
+  background-image: url("../Assets/imgs/FCI.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.landing .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.5);
+}
+.landing h1 {
+  position: relative;
+  margin: 0;
+  color: var(--main-background-color);
+  transition: var(--main-transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Type Login
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.TypeLogin {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.TypeLogin .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.TypeLogin .container > h1 {
+  position: relative;
+  color: var(--main-color);
+  text-transform: capitalize;
+  padding: 0 0 10px 0;
+  width: fit-content;
+}
+.TypeLogin .container > h1::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--main-color);
+}
+
+.TypeLogin .card-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.TypeLogin .card-container .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 10px;
+  border: 2px solid var(--main-color);
+  border-radius: 0.5em;
+}
+.TypeLogin .card-container .box h1 {
+  position: relative;
+  font-size: 18px;
+}
+.TypeLogin .card-container .box i {
+  position: relative;
+  font-size: 30px;
+  color: var(--main-color);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Info
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Info {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.Info .container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.Info .container .left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+.Info .container .left h1 {
+  position: relative;
+  color: var(--main-color);
+  text-align: center;
+}
+.Info .container .left h2 {
+  font-size: 20px;
+  text-align: center;
+}
+.Info .container .left p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 10px 0 0 0;
+  text-align: center;
+  width: 80%;
+}
+.Info .container .right {
+  position: relative;
+  min-width: 250px;
+  width: 250px;
+}
+@media (max-width: 992px) {
+  .Info .container {
+    flex-direction: column-reverse;
+  }
+  .Info .container .left p {
+    width: 100%;
+  }
+}
+.Info .container .right img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Footer
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.footer {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: #eee;
+}
+.footer .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 10px;
+}
+.footer .container .contact h1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.7px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 3px solid var(--main-color);
+  width: fit-content;
+  padding-bottom: 10px;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.footer .contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footer .contact h1 img {
+  position: relative;
+  width: 60px;
+}
+.footer .contact h1 + p {
+  margin-bottom: 10px;
+  color: var();
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: var(--main-transition);
+}
+.footer .contact .social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.footer .contact .social i {
+  width: 35px;
+  height: 35px;
+  background-color: var(--white-color);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: var(--main-transition);
+}
+.footer .contact .social i:hover {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.footer .contact .contact-action {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .contact .contact-action .box {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 0;
+  color: var(--black-color);
+}
+.footer .Map iframe {
+  border-radius: var(--main-border-radius);
+}
+
+.footer .waves {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.wave1 use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave2 use {
+  animation: move-forever2 8s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave3 use {
+  animation: move-forever3 6s linear infinite;
+  animation-delay: -2s;
+  fill: var(--white-color);
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Login Form 
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.LoginPage {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+.LoginPage .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.LoginPage .container .box {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.LoginPage .container .box h1 {
+  position: relative;
+  text-align: center;
+  color: var(--main-color);
+  padding-bottom: 10px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.LoginPage .container .box h1::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  background-color: var(--main-color);
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.LoginPage .container .box .input-box {
+  position: relative;
+  background-color: #eee;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: var(--main-border-radius);
+}
+.LoginPage .container .box .input-box input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  caret-color: var(--main-color);
+  border: 0;
+  background-color: transparent;
+  transition: var(--main-transition);
+  font-size: 16px;
+}
+.LoginPage .container .box .input-box input:focus {
+  outline: 0;
+}
+.LoginPage .container .box .input-box input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.LoginPage .container .box .warning {
+  position: relative;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-p-color);
+}
+.LoginPage .container .box .input-button {
+  position: relative;
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: var(--main-border-radius);
+  transition: var(--main-transition);
+}
+.LoginPage .container .box .input-button:hover {
+  background-color: var(--main-color-hover);
+}
+.LoginPage .container .box .input-button button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  color: #eee;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: var(--main-border-radius);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Student Profile
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.StudentProfile {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.StudentProfile::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background-image: url("../Assets/imgs/home-page-header.png");
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.StudentProfile::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background-color: #040d1278;
+  top: 0;
+  left: 0;
+}
+.StudentProfile .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    StudentProfile Edit Action
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+
+.StudentProfile .edit-action {
+  position: relative;
+  width: fit-content;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  gap: 10px;
+  align-items: center;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    StudentProfile box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.StudentProfile .container .box {
+  position: relative;
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 5px 2px rgb(183, 182, 182);
+  z-index: 5;
+  padding: 20px;
+}
+@media (max-width: 992px) {
+  .StudentProfile .container .box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    StudentProfile box left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+
+.StudentProfile .container .box .img-box {
+  position: relative;
+  width: 300px;
+  min-width: 300px;
+  height: 300px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.StudentProfile .container .box .img-box label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.StudentProfile .container .box .img-box label::before {
+  position: absolute;
+  content: "Upload  !";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000078;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.StudentProfile .container .box .img-box label:hover::before {
+  opacity: 1;
+}
+.StudentProfile .container .box .img-box img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    StudentProfile box right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.StudentProfile .container .box .right {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.StudentProfile .container .box .right .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #eee;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: var(--main-border-radius);
+}
+.StudentProfile .container .box .right .input-box i {
+  color: var(--main-color);
+}
+.StudentProfile .container .box .right .input-box input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  caret-color: var(--main-color);
+  border: 0;
+  background-color: transparent;
+  transition: var(--main-transition);
+  font-size: 16px;
+}
+.StudentProfile .container .box .right .input-box input:focus {
+  outline: 0;
+}
+.StudentProfile .container .box .right .input-box input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Instructo rProfile
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.InstructorProfile {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.InstructorProfile::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background-image: url("../Assets/imgs/home-page-header.png");
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.InstructorProfile::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background-color: #040d1278;
+  top: 0;
+  left: 0;
+}
+.InstructorProfile .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    InstructorProfile Edit Action
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+
+.InstructorProfile .edit-action {
+  position: relative;
+  width: fit-content;
+  padding: 10px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  gap: 10px;
+  align-items: center;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    InstructorProfile box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.InstructorProfile .container .box {
+  position: relative;
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 5px 2px rgb(183, 182, 182);
+  z-index: 5;
+  padding: 20px;
+}
+@media (max-width: 992px) {
+  .InstructorProfile .container .box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    Profile box left
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+
+.InstructorProfile .container .box .img-box {
+  position: relative;
+  width: 300px;
+  min-width: 300px;
+  height: 300px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.InstructorProfile .container .box .img-box label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.InstructorProfile .container .box .img-box label::before {
+  position: absolute;
+  content: "Upload  !";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000078;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0;
+  transition: var(--main-transition);
+}
+.InstructorProfile .container .box .img-box label:hover::before {
+  opacity: 1;
+}
+.InstructorProfile .container .box .img-box img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+    Profile box right
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.InstructorProfile .container .box .right {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.InstructorProfile .container .box .right .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #eee;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: var(--main-border-radius);
+}
+.InstructorProfile .container .box .right .input-box i {
+  color: var(--main-color);
+}
+.InstructorProfile .container .box .right .input-box input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  caret-color: var(--main-color);
+  border: 0;
+  background-color: transparent;
+  transition: var(--main-transition);
+  font-size: 16px;
+}
+.InstructorProfile .container .box .right .input-box input:focus {
+  outline: 0;
+}
+.InstructorProfile .container .box .right .input-box input:focus::placeholder {
+  opacity: 0;
+  transition: var(--main-transition);
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Schedule Page
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Schedule {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.Schedule::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background-image: url("../Assets/imgs/home-page-header.png");
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Schedule::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 200px;
+  background-color: #040d1278;
+  top: 0;
+  left: 0;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+  Schedule box
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Schedule .container .card {
+  position: relative;
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 5px 2px rgb(183, 182, 182);
+  z-index: 5;
+  padding: 20px;
+}
+@media (max-width: 992px) {
+  .Schedule .container .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.Schedule .container .card h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.Schedule .container .card .button-control {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  color: var(--main-color);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.Schedule .container .card .button-control button {
+  position: relative;
+  padding: 10px;
+  background-color: var(--main-color);
+  border: 0;
+  cursor: pointer;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+# Schedule ScheduleContainer
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.Schedule .ScheduleContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.Schedule table {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+}
+.Schedule table th,
+.Schedule table td {
+  margin: 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--black-color);
+  font-weight: 500;
+  height: 50px;
+  border-bottom: 0.5px solid rgb(193, 193, 193);
+  border-left: 0.5px solid rgb(193, 193, 193);
+}
+.Schedule table th {
+  text-align: center;
+}
+.Schedule table td:not(:first-child) {
+  cursor: pointer;
+}
+.Schedule table thead th {
+  position: relative;
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: 500;
+}
+.Schedule table td:first-child {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+}
+.Schedule table tbody tr:hover {
+  background-color: rgba(193, 193, 193, 0.3);
+}
+
+@media screen and (max-width: 776px) {
+  .Schedule {
+    padding: 0;
+  }
+  .Schedule table {
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .Schedule table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .Schedule table tr {
+    position: relative;
+    border-bottom: 3px solid #ddd;
+    margin-bottom: 0.625em;
+    width: 100%;
+  }
+  .Schedule table tr {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .Schedule table tr > :first-child {
+    grid-column: 1 / 3;
+  }
+  .Schedule table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 14px;
+    text-align: right;
+  }
+  .Schedule table td:first-child {
+    text-align: center;
+    background-color: var(--main-page-color);
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: bold;
+    width: 100%;
+  }
+  .Schedule table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+
+  .Schedule table td:last-child {
+    border-bottom: 0;
+  }
+}

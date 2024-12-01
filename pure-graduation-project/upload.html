@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/imgs/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="academic system management for students and teachers"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <!-- Title -->
+    <title>upload-exam</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Css/all.min.css" />
+    <link rel="stylesheet" href="./Css/normalize.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Css/upload.css">
+
+    <script
+      src="https://kit.fontawesome.com/e39d260dfe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="root">
+      <div class="header">
+        <div class="container">
+          <a href="home.html" class="left" id="home-link">
+            <img
+              src="Assets/imgs/tanta-univ.png"
+              alt="Tanta University"
+              class="logo"
+            />
+            <h3>Tanta University</h3>
+          </a>
+          <div class="right">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <img
+              src="Assets/imgs/logo.png"
+              alt="Computer Science Tanta University"
+              class="logo"
+            />
+            <div class="name">
+              <span>Faculty of Computer </span>
+              <span>and information</span>
+            </div>
+          </div>
+        </div>
+        <ul class="NavLinks active" id="nav-links">
+          <li>
+            <a href="Instructor.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Teaching Materials/Teaching Materials.html">
+              <i class="fa-solid fa-book"></i>
+              <span>Teaching Matrial</span>
+            </a>
+          </li>
+          <li>
+            <a href="upload.html" class="active">
+              <i class="fa-solid fa-flask-vial"></i>
+              <span>Exams</span>
+            </a>
+          </li>
+          <li>
+            <a href="projects/projects.html">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="Grades.html">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Grades</span>
+            </a>
+          </li>
+          <li>
+            <a href="Schedule.html">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Academic advising/Academic Advising doctor.html">
+              <i class="fa-solid fa-user-tie"></i>
+              <span>Academic Advising Doctor</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!--^*===============>body section<====================  -->
+      <section class="upload-exam text-black">
+        <h2 class="text-center pb-4 pt-4">Upload Exam</h2>
+        <div class="container bg-light-gray shadow-md rounded-2">
+          <div class="d-flex justify-content-between px-5 pt-3">
+            <p>Doctor Name</p>
+            <p>exam</p>
+          </div>
+          <div class="row py-5">
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-2 d-flex justify-content-center flex-column"
+            >
+              <div
+                class="level d-flex justify-content-center bg-gray rounded-pill py-3"
+              >
+                <p class="fs-3 m-0">Level 1</p>
+              </div>
+              <div
+                class="term pt-5 text-center d-flex justify-content-center flex-column"
+              >
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-4 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 1
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-1-first-term-exam"
+                    name="level-1-first-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-2 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 2
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-1-second-term-exam"
+                    name="level-1-second-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-2 d-flex justify-content-center flex-column"
+            >
+              <div
+                class="level d-flex justify-content-center bg-gray rounded-pill py-3"
+              >
+                <p class="fs-3 m-0">Level 2</p>
+              </div>
+              <div
+                class="term pt-5 text-center d-flex justify-content-center flex-column"
+              >
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-4 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 1
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-2-first-term-exam"
+                    name="level-2-first-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-2 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 2
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-2-second-term-exam"
+                    name="level-2-second-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-2 d-flex justify-content-center flex-column"
+            >
+              <div
+                class="level d-flex justify-content-center bg-gray rounded-pill py-3"
+              >
+                <p class="fs-3 m-0">Level 3</p>
+              </div>
+              <div
+                class="term pt-5 text-center d-flex justify-content-center flex-column"
+              >
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-4 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 1
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-3-first-term-exam"
+                    name="level-3-first-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-2 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 2
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-3-second-term-exam"
+                    name="level-3-second-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 col-md-6 col-sm-12 py-2 d-flex justify-content-center flex-column"
+            >
+              <div
+                class="level d-flex justify-content-center bg-gray rounded-pill py-3"
+              >
+                <p class="fs-3 m-0">Level 4</p>
+              </div>
+              <div
+                class="term pt-5 text-center d-flex justify-content-center flex-column"
+              >
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-4 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 1
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-4-first-term-exam"
+                    name="level-4-first-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+                <div class="d-flex align-items-baseline gap-1 w-75">
+                  <div href="" class="term-link p-1 px-3 fs-5 mb-2 text-nowrap">
+                    <i class="fa-solid fa-play pe-2 fs-6"></i>
+                    Term 2
+                  </div>
+                  <input
+                    class="mb-3 flex-grow-1"
+                    type="url"
+                    placeholder="Enter Pdf Link"
+                    id="level-4-second-term-exam"
+                    name="level-4-second-term-exam"
+                    maxlength="50"
+                    value="https://docs.google.com/forms/d/e/1FAIpQLScZMJQvrDs8eX2GGQJZAuAAYl57Qo4QS1Z5FRyIHQdRpb1fSg/viewform?embedded=true"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="w-100 d-flex align-items-center justify-content-end pt-5">
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script
+    src="https://kit.fontawesome.com/e39d260dfe.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/table-to-excel/1.0.0/tableToExcel.min.js"></script>
+  <script src="./JS/index.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Handle printing
+      document
+        .getElementById("printButton")
+        .addEventListener("click", function () {
+          window.print();
+        });
+
+      // Handle downloading as Excel
+      document
+        .getElementById("downloadButton")
+        .addEventListener("click", function () {
+          const table = document.getElementById("scheduleTable");
+          const html = table.outerHTML;
+
+          const blob = new Blob([html], { type: "application/vnd.ms-excel" });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "Schedule.xls";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+    });
+  </script>
+
+
+  <script>
+    const saveBtn = document.querySelector(".save-btn");
+
+    saveBtn.addEventListener("click", () => {
+      const exams = document.querySelectorAll("input[type='url']");
+      const examsData = Array.from(exams).map((exam) => ({
+        level: exam.id.split("-")[1],
+        term: exam.id.split("-")[2],
+        link: exam.value,
+      }));
+      
+      // save examsData to local storage
+      localStorage.setItem("examsData", JSON.stringify(examsData));
+
+      // show success message
+      alert("exams saved successfully");
+    });
+
+    // load examsData from local storage
+    const examsData = JSON.parse(localStorage.getItem("examsData")) || [];
+    examsData.forEach((exam) => {
+      const examInput = document.getElementById(
+        `level-${exam.level}-${exam.term}-term-exam`
+      );  
+      examInput.value = exam.link;
+    });
+  </script>
+</html>

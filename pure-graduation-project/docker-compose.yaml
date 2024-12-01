@@ -1,0 +1,128 @@
+version: "3"
+services:
+# Nginx server
+  # nginx:
+  #   # Build context
+  #   build: ./nginx
+  #   # Mapping machine and container ports
+  #   ports:
+  #     - 80:80
+  #   container_name: nginx-hoda-elnas
+  #   # Storage volumes
+  #   volumes:
+  #     - media-cdn-data:/app/media_cdn
+  #     - static-cdn-data:/app/static_cdn
+  #   depends_on:
+  #     - api
+  #     - dashboard
+  #   restart: always
+
+  caddy:
+    image: caddy/caddy:2.6.2-alpine
+    container_name: caddy-hoda-elnas
+    restart: unless-stopped
+    # Mapping machine and container ports
+    ports:
+      - 80:80
+      - 443:443
+    # Storage volumes
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - caddy-config:/config
+      - caddy-data:/data
+      - media-cdn-data:/app/media_cdn
+      - static-cdn-data:/app/static_cdn
+    depends_on:
+      - api
+      - instructor
+      - dashboard
+      - portainer
+
+  db:
+    image: postgres:15.6-alpine3.19
+    container_name: main-postgres
+    ports:
+      - 5432:5432
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: khirallah
+      POSTGRES_PASSWORD: '%tMCm@DvFYPVe8c'
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis_data:/var/lib/redis
+    container_name: redis-1
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass %tMCm@DvFYPVe8c
+    restart: always
+
+  api:
+    image: khirallah/hoda-elnas-api:production
+    container_name: hoda-elnas-api
+    ports:
+      - 8400:8000
+    command: bash -c "python manage.py collectstatic --noinput && gunicorn --workers=10 --timeout=300 --bind 0.0.0.0:8400 hodaelnas.wsgi"
+    volumes:
+      - media-cdn-data:/app/media_cdn
+      - static-cdn-data:/app/static_cdn
+    depends_on:
+      - db
+      - redis
+    restart: always
+    tty: true
+    env_file:
+      - ./envs/api/.env
+
+  dashboard:
+    image: khirallah/hoda-elnas-dashboard:production
+    container_name: hoda-elnas-dashboard
+    ports:
+      - 8402:8000
+    command: bash -c "python manage.py collectstatic --noinput && gunicorn --workers=10 --timeout=300 --bind 0.0.0.0:8402 dashboard.wsgi"
+    volumes:
+      - media-cdn-data:/app/media_cdn
+      - static-cdn-data:/app/static_cdn
+    depends_on:
+      - api
+    restart: always
+    tty: true
+
+  instructor:
+    image: khirallah/hoda-elnas-instructor:production
+    container_name: hoda-elnas-instructor
+    ports:
+      - 8401:8000
+    command: bash -c "python manage.py collectstatic --noinput && gunicorn --workers=10 --timeout=300 --bind 0.0.0.0:8401 Hudaelnas.wsgi"
+    volumes:
+      - media-cdn-data:/app/media_cdn
+      - static-cdn-data:/app/static_cdn
+    depends_on:
+      - api
+    restart: always
+    tty: true
+
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./portainer-data:/data
+    ports:
+      - 9443:9443
+
+
+volumes:
+  media-cdn-data:
+  static-cdn-data:
+  caddy-config:
+  caddy-data:
+  postgres_data:
+  redis_data:
